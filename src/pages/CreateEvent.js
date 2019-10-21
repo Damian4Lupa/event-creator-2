@@ -60,34 +60,6 @@ class CreateEvent extends Component {
     })
   }
 
-  // validation = () => {
-
-  //   if ((this.state.text.length > 5) && (this.state.date !== "") && (this.state.time !== "")) {
-
-  //     this.setState({
-  //       dataComplete: true
-  //     })
-  //   }
-  // }
-
-  // startEvent = () => {
-  //   // this.buttonClicked()
-  //   this.validation()
-
-  //   // const { dataComplete, buttonClicked } = this.state
-
-  //   // if (dataComplete && buttonClicked) {
-
-  //   // }
-
-  //   setTimeout(() => {
-  //     this.setState({
-  //       dataComplete: false
-  //     })
-  //   }, 1000);
-  // }
-
-
   render() {
 
     const { date, time, text, img } = this.state
@@ -199,11 +171,12 @@ class CreateEvent extends Component {
                       <button id="img9" className={btnStyle} onClick={this.changeImg}><span className="btn-img">1</span></button>
                       <button id="img10" className={btnStyle} onClick={this.changeImg}><span className="btn-img">1</span></button>
                     </div>
-               
+
                     <div class="row justify-content-end">
                       <div className="mt-4 mr-4">
 
-                        {dataComplete ? show_activeButton : show_inactiveButton}
+                        {dataComplete ? show_activeButton : show_activeButton}
+                        {/* popraw na show_inactiveButton */}
 
                       </div>
                     </div>

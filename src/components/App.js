@@ -4,7 +4,6 @@ import 'normalize.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import '../styles/App.css'
 import '../styles/Img.css'
-import '../styles/Font.css'
 
 import Page from './Page'
 
@@ -13,13 +12,9 @@ class App extends Component {
   render() {
     return (
       <Router>
-
-        <div className="">
-
+        <div>
           <Page />
-
         </div>
-
       </Router>
     );
   }
