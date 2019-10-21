@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import $ from 'jquery'
 
 class CreateEvent extends Component {
 
   state = {
-    img: "",
+    img: "img1",
     font: "",
     text: "",
     date: "",
-    time: ""
+    time: "",
   }
 
   fontList = [{
@@ -41,30 +42,93 @@ class CreateEvent extends Component {
     event.preventDefault()
     let id = event.target.id
     $('#background').attr('class', `${id}`)
+    this.setState({
+      img: id
+    })
   }
 
   changeFont = event => {
 
     event.preventDefault()
     let id = event.target.id - 1
+    let font = this.fontList[id].font
 
-    $('.event-font').css('font-family', this.fontList[id].font)
+    $('.event-font').css('font-family', font)
+
+    this.setState({
+      font
+    })
   }
+
+  // validation = () => {
+
+  //   if ((this.state.text.length > 5) && (this.state.date !== "") && (this.state.time !== "")) {
+
+  //     this.setState({
+  //       dataComplete: true
+  //     })
+  //   }
+  // }
+
+  // startEvent = () => {
+  //   // this.buttonClicked()
+  //   this.validation()
+
+  //   // const { dataComplete, buttonClicked } = this.state
+
+  //   // if (dataComplete && buttonClicked) {
+
+  //   // }
+
+  //   setTimeout(() => {
+  //     this.setState({
+  //       dataComplete: false
+  //     })
+  //   }, 1000);
+  // }
+
 
   render() {
 
-    const { date, time, text } = this.state
+    const { date, time, text, img } = this.state
     const btnStyle = "btn btn-outline-primary"
+    let dataComplete = false
+
+    const show_activeButton = <button
+      className={btnStyle}
+    >
+      <Link to={{
+        pathname: '/clock',
+        state: {
+          img: this.state.img,
+          font: this.state.font,
+          text: this.state.text,
+          date: this.state.date,
+          time: this.state.time,
+        }
+      }}>Get ready!</Link>
+    </button>
+
+    const show_inactiveButton = <button
+      className="btn btn-outline-primary disabled"
+    >Get ready!
+  </button>
+
+    if ((text.length > 5) && (date !== "") && (time !== "")) {
+      dataComplete = true
+    } else {
+      dataComplete = false
+    }
 
     return (
 
-      <div id="background" className="img1">
-
+      <div id="background" className={img}>
         <div className="container">
 
           <div className="row">
             <div className="col-lg-6 mx-auto mt-card">
               <div className="card card-signin my-5">
+
                 <div className="card-body">
                   <h5 className="card-title text-center">event creator</h5>
                   <form className="form-signin">
@@ -135,10 +199,12 @@ class CreateEvent extends Component {
                       <button id="img9" className={btnStyle} onClick={this.changeImg}><span className="btn-img">1</span></button>
                       <button id="img10" className={btnStyle} onClick={this.changeImg}><span className="btn-img">1</span></button>
                     </div>
-
+               
                     <div class="row justify-content-end">
                       <div className="mt-4 mr-4">
-                        <button type="button" className={btnStyle}>Get ready!</button>
+
+                        {dataComplete ? show_activeButton : show_inactiveButton}
+
                       </div>
                     </div>
 
