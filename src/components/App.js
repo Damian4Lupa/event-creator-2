@@ -3,6 +3,8 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import 'normalize.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import '../styles/App.css'
+import '../styles/Img.css'
+import '../styles/Font.css'
 
 import Page from './Page'
 

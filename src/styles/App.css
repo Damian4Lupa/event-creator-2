@@ -4,9 +4,11 @@
 }
 
 body {
-    /* background: url("../images/img1.jpg"); */
-    /* background: #007bff;
-    background: linear-gradient(to right, #0062E6, #33AEFF); */
+    font: 100% normal Arial, sans-serif;
+}
+
+.event-font {
+    font-family: sans-serif;
 }
 
 .card-signin {
@@ -175,12 +177,12 @@ body {
     /* letter-spacing: 1rem; */
 }
 
-.background {
+#background {
     /* position: relative; */
     background-position: center;
     background-attachment: fixed;
-    background-size: contain;
-
+    background-size: cover;
+    /* background: url("../images/img1.jpg"); */
     /* min-width: 100%;
     min-height: 100%; */
     height: 100vh;
@@ -190,18 +192,14 @@ body {
     opacity: 0.74;
 }
 
-.img1 {
-  background: url("../images/img1.jpg");  
-}
-
 .card {
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.45);
 }
 
 .form-control {
-    background-color: rgba(255, 255, 255, 0.75); 
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
-.aaa {
-    margin-top: 10vh;
+.mt-card {
+    margin-top: 6vh;
 }
