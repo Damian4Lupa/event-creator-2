@@ -66,6 +66,10 @@ class CreateEvent extends Component {
     const btnStyle = "btn btn-outline-primary"
     let dataComplete = false
 
+    
+    let aaa = +time
+console.log(aaa, typeof aaa)
+
     const show_activeButton = <button
       className={btnStyle}
     >
