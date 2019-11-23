@@ -210,5 +210,9 @@ body {
 .event-text {
     font-size: 3rem;
     text-align: center;
-    /* width: 600px; */
+}
+
+.link:hover {
+    text-decoration: none;
+    
 }

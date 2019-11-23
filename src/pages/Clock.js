@@ -74,8 +74,6 @@ class Clock extends Component {
     })
   }
 
-
-
   render() {
 
     const { img, text, days, hours, minutes, seconds } = this.state
@@ -88,27 +86,45 @@ class Clock extends Component {
 
       <div id="background" className={img}>
 
-        <button className="btn btn-outline-primary mx-4 my-4 float-right">
-          <Link to="/">Back</Link>
-        </button>
+        <Link to="/"><button className="btn btn-outline-primary mx-4 my-4 float-right">Back</button></Link>
 
         <div className="container">
 
           <div className="row">
             <div className="col-7 mt-card-clock">
-              <div className="card card-signin my-5">
+              <div className="card card-signin">
 
                 <div className="card-body">
 
-                  <p className="event-text event-font">{text}</p>
-                  <p className="event-text event-font mt-5">
-                    
-                    <span>{days}</span> d:
-                    <span> {hours}</span> h:
-                    <span> {minutes}</span> m:
-                    <span> {seconds}</span> s
-                  </p>
+                  <p className="event-text event-font mt-4">{text}</p>
+                  <div className="event-text event-font mt-5">
 
+                    <div className="row">
+                      <div className="col-2"> </div>
+                      <div className="col">
+                        <span>{days}</span>
+                        <h6><span>days</span></h6>
+                      </div>
+
+                      <div className="col">
+                        <span> {hours}</span>
+                        <h6><span>hrs</span></h6>
+                      </div>
+
+                      <div className="col">
+                        <span> {minutes}</span>
+                        <h6><span>min</span></h6>
+                      </div>
+
+                      <div className="col">
+                        <span> {seconds}</span>
+                        <h6><span> sec</span></h6>
+                      </div>
+
+                      <div className="col-2"> </div>
+                    </div>
+
+                  </div>
                 </div>
               </div>
             </div>

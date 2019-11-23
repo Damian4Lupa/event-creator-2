@@ -29,6 +29,20 @@ class CreateEvent extends Component {
   }
   ]
 
+  componentDidMount = () => {
+
+    this.loadSessionStorage()
+
+  }
+
+  componentDidUpdate = (prevProps, prevState) => {
+
+    this.saveSessionStorage()
+
+    this.loadSessionStorage()
+
+  }
+
   changeValue = event => {
 
     const name = event.target.type
@@ -60,19 +74,49 @@ class CreateEvent extends Component {
     })
   }
 
+  saveSessionStorage = () => {
+
+    sessionStorage.setItem('img', this.state.img);
+    sessionStorage.setItem('font', this.state.font);
+    sessionStorage.setItem('text', this.state.text);
+    sessionStorage.setItem('date', this.state.date);
+    sessionStorage.setItem('time', this.state.time);
+
+    console.log("wykonalem save storage")
+  }
+
+  loadSessionStorage = () => {
+
+    let img = sessionStorage.getItem('img');
+    let font = sessionStorage.getItem('font');
+    let text = sessionStorage.getItem('text');
+    let date = sessionStorage.getItem('date');
+    let time = sessionStorage.getItem('time');
+
+    // console.log(img)
+
+    if (text !== this.state.text) {
+      this.setState({
+        img,
+        font,
+        text,
+        date,
+        time
+      })
+    }
+
+    console.log("wykonalem load storage")
+
+  }
+
+
   render() {
 
     const { date, time, text, img } = this.state
     const btnStyle = "btn btn-outline-primary"
     let dataComplete = false
 
-    
-    let aaa = +time
-console.log(aaa, typeof aaa)
-
-    const show_activeButton = <button
-      className={btnStyle}
-    >
+    const show_activeButton =
       <Link to={{
         pathname: '/clock',
         state: {
@@ -82,8 +126,10 @@ console.log(aaa, typeof aaa)
           date: this.state.date,
           time: this.state.time,
         }
-      }}>Get ready!</Link>
-    </button>
+      }}><button
+        // onClick={this.saveSessionStorage}
+        className={btnStyle}
+      >Get ready!</button></Link>
 
     const show_inactiveButton = <button
       className="btn btn-outline-primary disabled"
@@ -118,7 +164,7 @@ console.log(aaa, typeof aaa)
                         onChange={this.changeValue}
                         required autoFocus
                       />
-                      <label for="inputText">Enter the name of the event</label>
+                      <label htmlFor="inputText">Enter the name of the event</label>
                     </div>
 
                     <div className="row mt-4">
@@ -129,18 +175,18 @@ console.log(aaa, typeof aaa)
                             onChange={this.changeValue}
                             required
                           />
-                          <label for="inputDate">Date</label>
+                          <label htmlFor="inputDate">Date</label>
                         </div>
                       </div>
                       <div className="col-4">
-                        <div class="form-label-group">
+                        <div className="form-label-group">
                           <input
                             type="time" id="inputTime" className="form-control"
                             value={time}
                             onChange={this.changeValue}
                             required
                           />
-                          <label for="inputTime">Time</label>
+                          <label htmlFor="inputTime">Time</label>
                         </div>
                       </div>
                     </div>
@@ -176,10 +222,10 @@ console.log(aaa, typeof aaa)
                       <button id="img10" className={btnStyle} onClick={this.changeImg}><span className="btn-img">1</span></button>
                     </div>
 
-                    <div class="row justify-content-end">
+                    <div className="row justify-content-end">
                       <div className="mt-4 mr-4">
 
-                        {dataComplete ? show_activeButton : show_activeButton}
+                        {dataComplete ? show_activeButton : show_inactiveButton}
                         {/* popraw na show_inactiveButton */}
 
                       </div>
