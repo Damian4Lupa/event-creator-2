@@ -162,14 +162,14 @@ body {
     visibility: hidden;
     padding-left: inherit;
     padding-right: inherit;
-    letter-spacing: 3.3rem;
+    letter-spacing: 3.45rem;
 }
 
 .btn-img {
     visibility: hidden;
     padding-left: inherit;
     padding-right: inherit;
-    letter-spacing: .4rem;
+    letter-spacing: .45rem;
 }
 
 .form-signin .btn {

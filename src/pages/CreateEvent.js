@@ -30,17 +30,12 @@ class CreateEvent extends Component {
   ]
 
   componentDidMount = () => {
-
     this.loadSessionStorage()
-
   }
 
   componentDidUpdate = (prevProps, prevState) => {
-
     this.saveSessionStorage()
-
     this.loadSessionStorage()
-
   }
 
   changeValue = event => {
@@ -87,13 +82,11 @@ class CreateEvent extends Component {
 
   loadSessionStorage = () => {
 
-    let img = sessionStorage.getItem('img');
-    let font = sessionStorage.getItem('font');
-    let text = sessionStorage.getItem('text');
-    let date = sessionStorage.getItem('date');
-    let time = sessionStorage.getItem('time');
-
-    // console.log(img)
+    let img = sessionStorage.getItem('img')
+    let font = sessionStorage.getItem('font') ? sessionStorage.getItem('font') : "";
+    let text = sessionStorage.getItem('text') ? sessionStorage.getItem('text') : "";
+    let date = sessionStorage.getItem('date') ? sessionStorage.getItem('dte') : "";
+    let time = sessionStorage.getItem('time') ? sessionStorage.getItem('time') : "";
 
     if (text !== this.state.text) {
       this.setState({
@@ -109,6 +102,15 @@ class CreateEvent extends Component {
 
   }
 
+  reset = () => {
+    this.setState({
+      img: "img1",
+      font: "",
+      text: "",
+      date: "",
+      time: "",
+    })
+  }
 
   render() {
 
@@ -127,7 +129,6 @@ class CreateEvent extends Component {
           time: this.state.time,
         }
       }}><button
-        // onClick={this.saveSessionStorage}
         className={btnStyle}
       >Get ready!</button></Link>
 
@@ -222,12 +223,14 @@ class CreateEvent extends Component {
                       <button id="img10" className={btnStyle} onClick={this.changeImg}><span className="btn-img">1</span></button>
                     </div>
 
-                    <div className="row justify-content-end">
-                      <div className="mt-4 mr-4">
+                    <div className="row mt-4">
 
+                      <div className="col-auto mr-auto ml-2">
+                        <button className={btnStyle} onClick={this.reset}>Reset</button>
+                      </div>
+
+                      <div className="col-auto mr-2">
                         {dataComplete ? show_activeButton : show_inactiveButton}
-                        {/* popraw na show_inactiveButton */}
-
                       </div>
                     </div>
 

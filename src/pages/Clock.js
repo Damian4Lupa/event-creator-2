@@ -7,6 +7,7 @@ class Clock extends Component {
     img: "",
     font: "",
     text: "",
+    date: "",
     time: "",
 
     days: 0,
@@ -47,7 +48,7 @@ class Clock extends Component {
     const date = this.state.date
     const time = this.hoursToMilliseconds(this.state.time)
 
-    const endTime = new Date(date).getTime() + time
+    const endTime = (new Date(date).getTime() + time) - 3600000
     const nowTime = new Date().getTime()
 
     days = Math.floor((endTime / (1000 * 60 * 60 * 24)) - (nowTime / (1000 * 60 * 60 * 24)))
