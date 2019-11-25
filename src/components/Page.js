@@ -9,7 +9,7 @@ const Page = () => {
   return (
     <>
       <Switch>
-        <Route path="/" exact component={CreateEvent} />
+        <Route path="/" component={CreateEvent} />
         <Route path="/clock" component={Clock} />
         <Route component={ErrorPage} />
       </Switch>
