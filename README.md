@@ -2,6 +2,8 @@
 
 Flexible program for creating any events. You provide the name of the event (birthday, anniversary or other event), date from the past or past. You can also choose the font and photo. It is a good idea to send the full event to your friends so that they know how many days you have your birthday.
 
+See how it looks: https://damian4lupa.github.io/event-creator2/
+
 ### download files 
 
 Clone a repository with git clone <repository URL>
