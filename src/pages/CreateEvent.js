@@ -33,7 +33,7 @@ class CreateEvent extends Component {
     this.loadSessionStorage()
   }
 
-  componentDidUpdate = (prevProps, prevState) => {
+  componentDidUpdate = () => {
     this.saveSessionStorage()
     this.loadSessionStorage()
   }
@@ -70,18 +70,14 @@ class CreateEvent extends Component {
   }
 
   saveSessionStorage = () => {
-
     sessionStorage.setItem('img', this.state.img);
     sessionStorage.setItem('font', this.state.font);
     sessionStorage.setItem('text', this.state.text);
     sessionStorage.setItem('date', this.state.date);
     sessionStorage.setItem('time', this.state.time);
-
-    console.log("wykonalem save storage")
   }
 
   loadSessionStorage = () => {
-
     let img = sessionStorage.getItem('img')
     let font = sessionStorage.getItem('font') ? sessionStorage.getItem('font') : "";
     let text = sessionStorage.getItem('text') ? sessionStorage.getItem('text') : "";
@@ -97,9 +93,6 @@ class CreateEvent extends Component {
         time
       })
     }
-
-    console.log("wykonalem load storage")
-
   }
 
   reset = () => {

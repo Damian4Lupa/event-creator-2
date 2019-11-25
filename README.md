@@ -1,6 +1,6 @@
 ## Event Creator
 
-Flexible program for creating any events. You provide the name of the event (birthday, anniversary or other event), date from the past or past. You can also choose the font and photo. It is a good idea to send the full event to your friends so that they know how many days you have your birthday.
+Flexible program to create accounting of date an hour of any events. You provide the name of the event (birthday, anniversary or other), date can be chosen from the past or future. You can also choose the font and photo. It is a good idea to send the full event to your friends so that they know how many days is missing to your birthday party.
 
 ### download files 
 
