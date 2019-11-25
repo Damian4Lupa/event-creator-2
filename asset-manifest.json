@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/event-creator2/static/css/main.12b624bf.chunk.css",
+    "main.js": "/event-creator2/static/js/main.ba6e0ab7.chunk.js",
+    "main.js.map": "/event-creator2/static/js/main.ba6e0ab7.chunk.js.map",
+    "runtime-main.js": "/event-creator2/static/js/runtime-main.246bccd7.js",
+    "runtime-main.js.map": "/event-creator2/static/js/runtime-main.246bccd7.js.map",
+    "static/css/2.23c02e1a.chunk.css": "/event-creator2/static/css/2.23c02e1a.chunk.css",
+    "static/js/2.c5ea9872.chunk.js": "/event-creator2/static/js/2.c5ea9872.chunk.js",
+    "static/js/2.c5ea9872.chunk.js.map": "/event-creator2/static/js/2.c5ea9872.chunk.js.map",
+    "index.html": "/event-creator2/index.html",
+    "precache-manifest.6a5f5ccaa07a5df241afef8b3c5951e7.js": "/event-creator2/precache-manifest.6a5f5ccaa07a5df241afef8b3c5951e7.js",
+    "service-worker.js": "/event-creator2/service-worker.js",
+    "static/css/2.23c02e1a.chunk.css.map": "/event-creator2/static/css/2.23c02e1a.chunk.css.map",
+    "static/css/main.12b624bf.chunk.css.map": "/event-creator2/static/css/main.12b624bf.chunk.css.map",
+    "static/media/Img.css": "/event-creator2/static/media/img9.30c6e2e8.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.246bccd7.js",
+    "static/css/2.23c02e1a.chunk.css",
+    "static/js/2.c5ea9872.chunk.js",
+    "static/css/main.12b624bf.chunk.css",
+    "static/js/main.ba6e0ab7.chunk.js"
+  ]
+}
