@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c6b72a6d929b51e4ede262dff0a6dd7e",
+    "revision": "6ba25c9af546f282de876fe967a7d4c9",
     "url": "/event-creator2/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/event-creator2/static/css/2.23c02e1a.chunk.css"
   },
   {
-    "revision": "a71eda9a56b810d70d83",
+    "revision": "0d24f380f918132521ae",
     "url": "/event-creator2/static/css/main.12b624bf.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/event-creator2/static/js/2.e822c095.chunk.js"
   },
   {
-    "revision": "a71eda9a56b810d70d83",
-    "url": "/event-creator2/static/js/main.4dced168.chunk.js"
+    "revision": "0d24f380f918132521ae",
+    "url": "/event-creator2/static/js/main.707864c6.chunk.js"
   },
   {
     "revision": "a26eb52904b6bb7289c3",
