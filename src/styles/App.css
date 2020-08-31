@@ -62,7 +62,6 @@ body {
     display: block;
     width: 100%;
     margin-bottom: 0;
-    /* Override default `<label>` margin */
     line-height: 1.5;
     color: #495057;
     border: 1px solid transparent;
@@ -112,9 +111,6 @@ body {
     background-color: #3b5998;
 }
 
-/* Fallback for Edge
-  -------------------------------------------------- */
-
 @supports (-ms-ime-align: auto) {
     .form-label-group>label {
         display: none;
@@ -124,9 +120,6 @@ body {
         color: #777;
     }
 }
-
-/* Fallback for IE
-  -------------------------------------------------- */
 
 @media all and (-ms-high-contrast: none),
 (-ms-high-contrast: active) {
@@ -177,7 +170,6 @@ body {
 }
 
 #background {
-    /* position: relative; */
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
