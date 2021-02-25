@@ -6,6 +6,7 @@ class CreateEvent extends Component {
 
   state = {
     img: "img1",
+    imgSize: 1000,
     font: "",
     text: "",
     date: "",
@@ -111,6 +112,35 @@ class CreateEvent extends Component {
       time: "",
     })
   }
+
+changeImgSize = (myWidth) => {
+let imgSize = 0
+
+if (myWidth >= 1000) {
+  imgSize = 1000
+} else if (myWidth < 1000 && myWidth >= 800) {
+  imgSize = 800
+} else {
+  imgSize = 500
+}
+
+this.setState({
+  imgSize
+})
+
+}  
+
+specifyWindowWidth = () => {
+    window.onresize = displayWindowSize;
+    window.onload = displayWindowSize;
+
+    function displayWindowSize() {
+        let myWidth = window.innerWidth;
+        this.changeImgSize(myWidth)
+        // console.log("myWidth", myWidth);
+    };
+}
+
 
   render() {
 
