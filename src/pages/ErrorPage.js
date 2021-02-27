@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function ErrorPage() {
     return (
-        <div id="background" className="img1">
+        <div id="background" className="img1-1000">
 
             <button className="btn btn-outline-primary mx-4 my-4 float-right">
                 <Link to="/">Back</Link>

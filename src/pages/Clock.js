@@ -5,6 +5,7 @@ import $ from 'jquery'
 class Clock extends Component {
   state = {
     img: "",
+    imgSize: 0,
     font: "",
     text: "",
     date: "",
@@ -17,12 +18,12 @@ class Clock extends Component {
   }
 
   componentDidMount() {
-    const { img, font, text, date, time } = this.props.location.state
+    const { img, imgSize, font, text, date, time } = this.props.location.state
 
     $('.event-font').css('font-family', font)
 
     this.setState({
-      img, font, text, date, time
+      img,imgSize, font, text, date, time
     })
   }
 
@@ -77,7 +78,7 @@ class Clock extends Component {
 
   render() {
 
-    const { img, text, days, hours, minutes, seconds } = this.state
+    const { img,imgSize, text, days, hours, minutes, seconds } = this.state
 
     setInterval(() => {
       this.clock()
@@ -85,7 +86,7 @@ class Clock extends Component {
 
     return (
 
-      <div id="background" className={img}>
+      <div id="background" className={`${img}-${imgSize}`}>
 
         <Link to="/"><button className="btn btn-outline-primary mx-4 my-4 float-right">Back</button></Link>
 
