@@ -136,7 +136,6 @@ class CreateEvent extends Component {
     } else {
       imgSize = 600;
     }
-    console.log("imgSize", imgSize);
     this.setState({
       imgSize,
     });
@@ -146,10 +145,6 @@ class CreateEvent extends Component {
     const { date, time, text, img, imgSize } = this.state;
     const btnStyle = "btn btn-outline-primary";
     let dataComplete = false;
-
-    if (window.onresize) {
-      console.log("zmiana szerokości okna");
-    }
 
     const show_activeButton = (
       <Link
@@ -238,9 +233,9 @@ class CreateEvent extends Component {
                     </div>
 
                     <div
+                      id="font"
                       className="btn-group"
                       role="group"
-                      aria-label="Basic example"
                     >
                       <button
                         id="1"
@@ -284,9 +279,9 @@ class CreateEvent extends Component {
                     </div>
 
                     <div
+                      id="image"
                       className="btn-group"
                       role="group"
-                      aria-label="Basic example"
                     >
                       <button
                         id="img1"
