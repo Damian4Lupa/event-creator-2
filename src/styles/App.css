@@ -188,7 +188,7 @@ body {
   margin-top: 6vh;
 }
 
-/* component clock */
+/* component clock
 
 .mt-card-clock {
   position: absolute;
@@ -205,19 +205,19 @@ body {
 
 .link:hover {
   text-decoration: none;
-}
+} */
 
-/*media queries component clock*/
+/*media queries component CreateEvent*/
 
-@media (max-width: 1600px) {
+@media (max-width: 1601px) {
   .mt-card {
-    margin-top: 1vh;
+    margin-top: 3vh;
   }
 }
 
 @media (max-width: 1536px) {
   .mt-card {
-    margin-top: 10vh;
+    margin-top: 8vh;
   }
 }
 
@@ -242,38 +242,86 @@ body {
 }
 
 @media (max-width: 1001px) {
+  :root {
+    --input-padding-x: 1rem;
+    --input-padding-y: 0.3rem;
+  }
+
+  body {
+    font: 90% normal Arial, sans-serif;
+  }
+  .card-signin .card-title {
+    margin-bottom: 1.5rem;
+    font-weight: 100;
+    font-size: 1.4rem;
+  }
+
+  .card-signin .card-body {
+    padding: 1.3rem;
+  }
+
+  .mt-card {
+    margin-top: 5vh;
+  }
+
   .container {
     max-width: 880px !important;
   }
 
+  .form-signin .btn {
+    padding: 0.4rem;
+  }
+
   #font .btn.btn-outline-primary {
-    padding: 0.1rem !important;
+    padding: 0.16rem !important;
   }
 
   #image .btn.btn-outline-primary {
-    padding: 0.3rem !important;
+    padding: 0.34rem !important;
   }
 }
 
-@media (max-width: 800px) {
-  .container {
-    max-width: 480px !important;
+@media (max-width: 801px) {
+  /* :root {
+    --input-padding-x: 1rem;
+    --input-padding-y: 0.3rem;
+  } */
+
+  body {
+    font: 90% normal Arial, sans-serif;
+  }
+  /* .card-signin .card-title {
+    margin-bottom: 1.5rem;
+    font-weight: 100;
+    font-size: 1.4rem;
   }
 
+  .card-signin .card-body {
+    padding: 1.3rem;
+  } */
+  .mt-card {
+    margin-top: 4vh;
+  }
+  .container {
+    max-width: 440px !important;
+  }
+  .form-signin .btn {
+    padding: 0.35rem;
+  }
   #font .btn.btn-outline-primary {
-    padding: 0.21rem !important;
+    padding: 0.16rem !important;
   }
 
   #image .btn.btn-outline-primary {
-    padding: 0.35rem !important;
+    padding: 0.34rem !important;
   }
 }
 
 @media (max-width: 415px) {
-  :root {
+  /* :root {
     --input-padding-x: 1rem;
     --input-padding-y: 0.5rem;
-  }
+  } */
 
   body {
     font: 85% normal Arial, sans-serif;
@@ -281,7 +329,7 @@ body {
 
   .card-signin .card-title {
     margin-bottom: 1rem;
-    font-weight: 100;
+    /* font-weight: 100; */
     font-size: 1.35rem;
   }
 
@@ -304,7 +352,7 @@ body {
   .form-control {
     font-size: 0.7rem;
   }
-  
+
   .bordered__text {
     line-height: 1.5;
   }
@@ -335,6 +383,10 @@ body {
     padding: 0.3rem;
   }
 
+  .form-label-group input:not(:placeholder-shown) ~ label {
+    font-size: 10px;
+  }
+
   #font .btn.btn-outline-primary {
     padding: 0.15rem !important;
   }
@@ -345,5 +397,88 @@ body {
 
   #image .btn.btn-outline-primary {
     padding: 0.25rem !important;
+  }
+}
+
+@media (max-width: 361px) {
+  #font .btn.btn-outline-primary {
+    padding: 0.17rem !important;
+  }
+
+  #font .btn-font {
+    letter-spacing: 2.5rem;
+  }
+
+  #image .btn.btn-outline-primary {
+    padding: 0.23rem !important;
+  }
+}
+
+/* component clock */
+
+.mt-card-clock {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.85;
+}
+
+.event-text {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.link:hover {
+  text-decoration: none;
+}
+
+/*media queries component clock*/
+
+@media (max-width: 1025px) {
+  .event-text {
+    font-size: 2.4rem;
+  }
+}
+@media (max-width: 801px) {
+  .event-text {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 721px) {
+  .event-text {
+    font-size: 1.9rem;
+  }
+}
+@media (max-width: 602px) {
+  .event-text {
+    font-size: 1.5rem;
+  }
+
+  .col-2 {
+    flex: none;
+    max-width: none;
+  }
+}
+
+@media (max-width: 415px) {
+  .col-7 {
+    flex: 0 0 70%;
+    max-width: 70%;
+  }
+
+  .event-text {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 376px) {
+  .col-7 {
+    flex: 0 0 80%;
+    max-width: 80%;
+  }
+
+  .event-text {
+    font-size: 1.2rem;
   }
 }
