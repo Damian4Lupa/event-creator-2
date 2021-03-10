@@ -4,7 +4,7 @@ import $ from 'jquery'
 
 class Clock extends Component {
   state = {
-    img: "",
+    img: "img1",
     imgSize: 0,
     font: "",
     text: "",
