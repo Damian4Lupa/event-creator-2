@@ -208,22 +208,36 @@ body {
 } */
 
 /*media queries component CreateEvent*/
+/* @media (orientation: portrait) {
+  #background {
+    height: 100vh;
+  }
+} */
 
-@media (max-width: 1601px) {
+@media (max-width: 1921px) {
+  :root {
+    --input-padding-y: 1rem;
+  }
   .mt-card {
-    margin-top: 3vh;
+    margin-top: 15vh;
   }
 }
 
-@media (max-width: 1536px) {
+@media (max-width: 1601px) {
   .mt-card {
     margin-top: 8vh;
   }
 }
 
-@media (max-width: 1440px) {
+/* @media (max-width: 1536px) {
   .mt-card {
-    margin-top: 1vh;
+    margin-top: 8vh;
+  }
+} */
+
+@media (max-width: 1281px) {
+  .mt-card {
+    margin-top: 5vh;
   }
 }
 
@@ -261,7 +275,7 @@ body {
   }
 
   .mt-card {
-    margin-top: 5vh;
+    margin-top: 8vh;
   }
 
   .container {
@@ -282,23 +296,13 @@ body {
 }
 
 @media (max-width: 801px) {
-  /* :root {
-    --input-padding-x: 1rem;
-    --input-padding-y: 0.3rem;
-  } */
-
   body {
     font: 90% normal Arial, sans-serif;
-  }
-  /* .card-signin .card-title {
-    margin-bottom: 1.5rem;
-    font-weight: 100;
-    font-size: 1.4rem;
   }
 
   .card-signin .card-body {
     padding: 1.3rem;
-  } */
+  }
   .mt-card {
     margin-top: 4vh;
   }
@@ -316,20 +320,39 @@ body {
     padding: 0.34rem !important;
   }
 }
+@media (max-width: 801px) and (min-height: 1279px),
+  (max-width: 769px) and (min-height: 1023px) {
+  .mt-card {
+    margin-top: 20vh;
+  }
+}
+
+@media (max-width: 602px) {
+  .mt-card {
+    margin-top: 15vh;
+  }
+}
+
+@media (max-width: 1921px) and (orientation: landscape) {
+  #background {
+    height: 110vh;
+  }
+}
 
 @media (max-width: 415px) {
-  /* :root {
-    --input-padding-x: 1rem;
-    --input-padding-y: 0.5rem;
-  } */
-
   body {
     font: 85% normal Arial, sans-serif;
   }
-
+  .col-7 {
+    flex: 0 0 0% !important;
+    max-width: 0%;
+  }
+  .ml-4,
+  .mx-4 {
+    margin-left: 1rem !important;
+  }
   .card-signin .card-title {
     margin-bottom: 1rem;
-    /* font-weight: 100; */
     font-size: 1.35rem;
   }
 
@@ -337,8 +360,12 @@ body {
     padding: 1.2rem;
   }
 
+  .form-label-group input:not(:placeholder-shown) ~ label {
+    font-size: 10px;
+  }
+
   #background {
-    background-position: bottom;
+    background-position: left;
   }
 
   .form-signin .btn {
@@ -364,7 +391,9 @@ body {
   #font .btn.btn-outline-primary {
     padding: 0.16rem !important;
   }
-
+  #font .btn.btn-outline-primary:first-child {
+    margin-left: 0.5rem;
+  }
   #font .btn-font {
     letter-spacing: 2.77rem;
   }
@@ -372,13 +401,87 @@ body {
   #image .btn.btn-outline-primary {
     padding: 0.26rem !important;
   }
+
+  #image .btn.btn-outline-primary:first-child {
+    margin-left: 0.5rem;
+  }
+}
+
+@media (max-width: 899px) and (orientation: landscape) {
+  #background {
+    height: 150vh;
+  }
+
+  body {
+    font: 85% normal Arial, sans-serif;
+  }
+  .form-label-group input:not(:placeholder-shown) ~ label {
+    font-size: 10px;
+  }
+  .col-7 {
+    flex: 0 0 60% !important;
+    max-width: 60%;
+  }
+  .ml-4,
+  .mx-4 {
+    margin-left: 1rem !important;
+  }
+  .card-signin .card-title {
+    margin-bottom: 1rem;
+    font-size: 1.35rem;
+  }
+
+  .card-signin .card-body {
+    padding: 1.2rem;
+  }
+
+  .form-signin .btn {
+    padding: 0.2rem;
+  }
+
+  .container {
+    max-width: 390px !important;
+  }
+
+  .form-control {
+    font-size: 0.7rem;
+  }
+
+  .bordered__text {
+    line-height: 1.5;
+  }
+
+  .mt-card {
+    margin-top: -5vh;
+  }
+
+  #font .btn.btn-outline-primary {
+    padding: 0.16rem !important;
+  }
+  #font .btn.btn-outline-primary:first-child {
+    margin-left: 0.5rem;
+  }
+  #font .btn-font {
+    letter-spacing: 2.77rem;
+  }
+
+  #image .btn.btn-outline-primary {
+    padding: 0.26rem !important;
+  }
+
+  #image .btn.btn-outline-primary:first-child {
+    margin-left: 0.5rem;
+  }
 }
 
 @media (max-width: 376px) {
   .mt-card {
     margin-top: 8vh;
   }
-
+  .ml-4,
+  .mx-4 {
+    margin-left: 0.6rem !important;
+  }
   .form-signin .btn {
     padding: 0.3rem;
   }
@@ -394,13 +497,23 @@ body {
   #font .btn-font {
     letter-spacing: 2.77rem;
   }
-
+  #font .btn.btn-outline-primary:first-child {
+    margin-left: 0rem;
+  }
   #image .btn.btn-outline-primary {
     padding: 0.25rem !important;
+  }
+  #image .btn.btn-outline-primary:first-child {
+    margin-left: 0rem;
   }
 }
 
 @media (max-width: 361px) {
+  .ml-4,
+  .mx-4 {
+    margin-left: 0.2rem !important;
+  }
+
   #font .btn.btn-outline-primary {
     padding: 0.17rem !important;
   }
@@ -455,6 +568,13 @@ body {
     font-size: 1.5rem;
   }
 
+  .col-2 {
+    flex: none;
+    max-width: none;
+  }
+}
+
+@media (max-width: 641px) and (orientation: landscape) {
   .col-2 {
     flex: none;
     max-width: none;
