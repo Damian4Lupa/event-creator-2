@@ -232,11 +232,7 @@ class CreateEvent extends Component {
                       <span className="bordered__text mt-2 mb-3">Font</span>
                     </div>
 
-                    <div
-                      id="font"
-                      className="btn-group"
-                      role="group"
-                    >
+                    <div id="font" className="btn-group" role="group">
                       <button
                         id="1"
                         className={btnStyle}
@@ -278,11 +274,7 @@ class CreateEvent extends Component {
                       <span className="bordered__text my-3">Image</span>
                     </div>
 
-                    <div
-                      id="image"
-                      className="btn-group"
-                      role="group"
-                    >
+                    <div id="image" className="btn-group" role="group">
                       <button
                         id="img1"
                         className={btnStyle}
