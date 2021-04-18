@@ -94,7 +94,7 @@ class CreateEvent extends Component {
       ? sessionStorage.getItem("text")
       : "";
     let date = sessionStorage.getItem("date")
-      ? sessionStorage.getItem("dte")
+      ? sessionStorage.getItem("date")
       : "";
     let time = sessionStorage.getItem("time")
       ? sessionStorage.getItem("time")

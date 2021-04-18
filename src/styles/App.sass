@@ -60,8 +60,8 @@ body
   letter-spacing: 3.45rem
   @media (max-width: 1025px)
     letter-spacing: .3rem
-    padding-left: 1.1rem
-    padding-right: 1.1rem
+    padding-left: 1.4rem
+    padding-right: 1.3rem
   @media (max-width: 801px) 
     padding-left: 1.3rem
     padding-right: 1.2rem
@@ -79,8 +79,8 @@ body
   letter-spacing: 0.45rem
   @media (max-width: 1025px)
     letter-spacing: 0.1rem
-    padding-left: 0.1rem
-    padding-right: 0.1rem
+    padding-left: 0.15rem
+    padding-right: 0.2rem
   @media (max-width: 801px)
     padding-left: 0.1rem
     padding-right: 0.15rem
@@ -102,6 +102,14 @@ body
 .form-label-group > input,
 .form-label-group > label 
   padding: $input-padding-y $input-padding-x
+  @media (max-width: 1025px)
+   padding: 0.75rem 1.4rem
+  @media (max-width: 801px) 
+   padding: 0.75rem 1.1rem
+  @media (max-width: 415px) 
+   padding: 0.75rem 1rem
+  @media (max-width: 361px) 
+   padding: 0.75rem .9rem
 
 .form-label-group > label 
   position: absolute
@@ -172,7 +180,7 @@ body
 
 .mt-card 
   margin-top: 6vh
-  @media (max-width: 413px)
+  @media (max-width: 415px)
     margin-top: 12vh
   @media (max-width: 376px)
     margin-top: 10vh
@@ -259,4 +267,3 @@ body
 
 .link:hover
   text-decoration: none
-

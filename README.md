@@ -15,9 +15,12 @@ https://damian4lupa.github.io/event-creator-2/
 
 ## Technologies used:
 
-[![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)]()
-[![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat-square&logo=css3)]()
-[![JavaScript](https://img.shields.io/badge/-JavaScript-yellow?style=flat-square&logo=javascript&logoColor=white)]()
-[![React](https://img.shields.io/badge/-React-61dafb?style=flat-square&logo=react&logoColor=white)]()
-[![jQuery](https://img.shields.io/badge/-jQuery-0769ad?style=flat-square&logo=jQuery&logoColor=white)]()
-[![React Router](https://img.shields.io/badge/-React%20Router-424242?style=flat-square&logo=React-Router&logoColor=white)]()
+<div>
+<img alt="HTML" src="https://img.shields.io/badge/HTML-orange?logo=html5&logoColor=white&style=flat"/>
+<img alt='Sass' src="https://img.shields.io/badge/Sass-pink?logo=sass&logoColor=white&style=flat"/>
+<img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-yellow?logo=javascript&logoColor=white&style=flat"/>
+<img alt="React" src="https://img.shields.io/badge/React-00CCFF?logo=react&logoColor=white&style=flat"/>
+<img alt="jQuery" src="https://img.shields.io/badge/jQuery-0769ad?logo=jquery&logoColor=white&style=flat"/>
+<img alt="React Router" src="https://img.shields.io/badge/ReactRouter-black?logo=React-Router&logoColor=white&style=flat"/>
+<img alt="Bootstrap" src="https://img.shields.io/badge/Bootstrap-7952b3?logo=bootstrap&logoColor=white&style=flat"/>
+</div>
